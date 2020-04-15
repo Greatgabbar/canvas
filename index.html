@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<style>
+  body{
+    background-image: url('./1.jpg');
+    background-size: cover;
+    color: #fd0808;
+    font-family: 'Press Start 2P', cursive;
+  }
+  .container{
+    margin:100px auto;
+    background-color:black;
+    height: 400px;
+    width: 500px;
+    border-radius: 20px;
+    padding:20px;
+    transition:all .5s;
+  }
+  .container:hover{
+   transform: scale(1.05);
+   border: 4px solid rgb(255, 255, 0);  }
+  h1{
+    text-align: center;
+  }
+  li{
+    text-decoration: none;
+    list-style-type: none;
+    color:green;
+    margin: 80px;
+    text-align: center;
+  }
+  li:hover{
+    transform: scale(1.3);
+  }
+  a{
+    text-decoration: none;
+      color: chartreuse;
+  }
+  a:hover{
+    color:coral;
+  }
+</style>
+  <title>Canvas</title>
+</head>
+<body>
+  <div class="container">
+  <h1>There are Two Type of Canvas Variet Available</h1>
+  <ul>
+    <li><a href="./varient/std.html">Standerd</a></li>
+    <li><a href="./varient/pre.html">Pro</a></li>
+  </ul>
+  <p>*TIP:hover Around Body</p>
+</div>
+</body>
+<script>
+const container=document.querySelector('.container');
+const lol=document.querySelector('body').addEventListener('mousemove',(e)=>{
+  // console.log(e);
+  container.style.background=`rgba(23,${e.offsetX},${e.offsetY})`;
+})
+// console.log(lol);
+</script>
+</html>
